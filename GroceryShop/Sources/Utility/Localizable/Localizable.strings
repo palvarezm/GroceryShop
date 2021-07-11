@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  GroceryShop
+
+  Created by Paul Alvarez on 10/07/21.
+  
+*/
+
+"add_product_to_cart_button" = "Add to cart";
+"loading_view_text" = "Loading";
