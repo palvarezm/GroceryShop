@@ -1,0 +1,41 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "category": "fruits",
+            "details": "Best of the fresh fruits right from the farm",
+            "image": {
+                "id": 1,
+                "name": "fruits_category.jpeg"
+            }
+        },
+        {
+            "id": 2,
+            "category": "vegetables",
+            "details": "Farm fresh vegetables delivered right at your doorstep",
+            "image": {
+                "id": 2,
+                "name": "vegetables_category.jpg"
+            }
+        },
+        {
+            "id": 3,
+            "category": "meat",
+            "details": "Fresh meat marketstore",
+            "image": {
+                "id": 3,
+                "name": "meat_category.jpg"
+            }
+        },
+        {
+            "id": 4,
+            "category": "diary products",
+            "details": "Fresh and safe diary products",
+            "image": {
+                "id": 4,
+                "name": "dairy_category.jpg"
+            }
+        }
+    ]
+}
+
