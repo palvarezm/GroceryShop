@@ -24,6 +24,10 @@
 		83971987269A7D380084E33C /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971986269A7D380084E33C /* LoadingIndicatorView.swift */; };
 		8397198C269A8BA30084E33C /* products-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8397198B269A8BA30084E33C /* products-response.json */; };
 		83971991269A8BBC0084E33C /* categories-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 83971990269A8BBC0084E33C /* categories-response.json */; };
+		83971999269A8DCE0084E33C /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971998269A8DCE0084E33C /* HttpRouter.swift */; };
+		8397199E269A8E400084E33C /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397199D269A8E400084E33C /* HttpService.swift */; };
+		839719A3269A93780084E33C /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839719A2269A93780084E33C /* RealmDatabase.swift */; };
+		839719A8269A93C80084E33C /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839719A7269A93C80084E33C /* StubService.swift */; };
 		C35EBBE4E9352CC5DFE7893F /* Pods_GroceryShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F54F4B10353C55E7CDEBE28 /* Pods_GroceryShopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		83971986269A7D380084E33C /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		8397198B269A8BA30084E33C /* products-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "products-response.json"; sourceTree = "<group>"; };
 		83971990269A8BBC0084E33C /* categories-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "categories-response.json"; sourceTree = "<group>"; };
+		83971998269A8DCE0084E33C /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		8397199D269A8E400084E33C /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		839719A2269A93780084E33C /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
+		839719A7269A93C80084E33C /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
 		9D07EBD70317E7E1CFDF780C /* Pods-GroceryShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryShop.release.xcconfig"; path = "Target Support Files/Pods-GroceryShop/Pods-GroceryShop.release.xcconfig"; sourceTree = "<group>"; };
 		A1351306A3F9D89670CC4C68 /* Pods-GroceryShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryShopTests.release.xcconfig"; path = "Target Support Files/Pods-GroceryShopTests/Pods-GroceryShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4577E641FDAB4F14C98F71D /* Pods_GroceryShop_GroceryShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryShop_GroceryShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +286,8 @@
 		83971995269A8BDC0084E33C /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				83971998269A8DCE0084E33C /* HttpRouter.swift */,
+				8397199D269A8E400084E33C /* HttpService.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -285,6 +295,7 @@
 		83971996269A8BE30084E33C /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				839719A2269A93780084E33C /* RealmDatabase.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 		83971997269A8BE80084E33C /* MockService */ = {
 			isa = PBXGroup;
 			children = (
+				839719A7269A93C80084E33C /* StubService.swift */,
 			);
 			path = MockService;
 			sourceTree = "<group>";
@@ -556,7 +568,11 @@
 				83971972269A7AF60084E33C /* UIVIew+Extension.swift in Sources */,
 				8397197C269A7BF80084E33C /* UIColor+Extension.swift in Sources */,
 				83971977269A7B060084E33C /* String+Extension.swift in Sources */,
+				839719A3269A93780084E33C /* RealmDatabase.swift in Sources */,
 				8397195E269A79D40084E33C /* NavigationBuilder.swift in Sources */,
+				83971999269A8DCE0084E33C /* HttpRouter.swift in Sources */,
+				8397199E269A8E400084E33C /* HttpService.swift in Sources */,
+				839719A8269A93C80084E33C /* StubService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
