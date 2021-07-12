@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		08CFDF2AE5EA18FD000F9705 /* Pods_GroceryShop_GroceryShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4577E641FDAB4F14C98F71D /* Pods_GroceryShop_GroceryShopUITests.framework */; };
 		6C7A836317302BA6B233BB11 /* Pods_GroceryShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624DEEFAE4428FDE4EDD60C8 /* Pods_GroceryShop.framework */; };
+		8394BEC1269BB83A00EA2ADA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394BEC0269BB83A00EA2ADA /* TabBarController.swift */; };
+		8394BEC9269BB9C200EA2ADA /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394BEC8269BB9C200EA2ADA /* TabBarPresenter.swift */; };
+		8394BECE269BBA6E00EA2ADA /* TabBarModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394BECD269BBA6E00EA2ADA /* TabBarModuleBuilder.swift */; };
+		8394BED6269BBB0200EA2ADA /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394BED5269BBB0200EA2ADA /* TabBarRouter.swift */; };
 		83971901269A51DE0084E33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971900269A51DE0084E33C /* AppDelegate.swift */; };
 		83971903269A51DE0084E33C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971902269A51DE0084E33C /* SceneDelegate.swift */; };
 		8397190A269A51DF0084E33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83971909269A51DF0084E33C /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		2F54F4B10353C55E7CDEBE28 /* Pods_GroceryShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DEC465F006CC6A3FED64F9 /* Pods-GroceryShop-GroceryShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryShop-GroceryShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-GroceryShop-GroceryShopUITests/Pods-GroceryShop-GroceryShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		624DEEFAE4428FDE4EDD60C8 /* Pods_GroceryShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8394BEC0269BB83A00EA2ADA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8394BEC8269BB9C200EA2ADA /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		8394BECD269BBA6E00EA2ADA /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
+		8394BED5269BBB0200EA2ADA /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		839718FD269A51DE0084E33C /* GroceryShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83971900269A51DE0084E33C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83971902269A51DE0084E33C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +129,17 @@
 				2F54F4B10353C55E7CDEBE28 /* Pods_GroceryShopTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8394BEBF269BB5B200EA2ADA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8394BECD269BBA6E00EA2ADA /* TabBarModuleBuilder.swift */,
+				8394BEC0269BB83A00EA2ADA /* TabBarController.swift */,
+				8394BEC8269BB9C200EA2ADA /* TabBarPresenter.swift */,
+				8394BED5269BBB0200EA2ADA /* TabBarRouter.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		839718F4269A51DE0084E33C = {
@@ -252,6 +271,7 @@
 		83971944269A5AF50084E33C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8394BEBF269BB5B200EA2ADA /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -562,12 +582,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				83971901269A51DE0084E33C /* AppDelegate.swift in Sources */,
+				8394BECE269BBA6E00EA2ADA /* TabBarModuleBuilder.swift in Sources */,
+				8394BEC1269BB83A00EA2ADA /* TabBarController.swift in Sources */,
 				83971903269A51DE0084E33C /* SceneDelegate.swift in Sources */,
 				83971981269A7CDA0084E33C /* Double+Extension.swift in Sources */,
 				83971987269A7D380084E33C /* LoadingIndicatorView.swift in Sources */,
 				83971972269A7AF60084E33C /* UIVIew+Extension.swift in Sources */,
 				8397197C269A7BF80084E33C /* UIColor+Extension.swift in Sources */,
 				83971977269A7B060084E33C /* String+Extension.swift in Sources */,
+				8394BEC9269BB9C200EA2ADA /* TabBarPresenter.swift in Sources */,
+				8394BED6269BBB0200EA2ADA /* TabBarRouter.swift in Sources */,
 				839719A3269A93780084E33C /* RealmDatabase.swift in Sources */,
 				8397195E269A79D40084E33C /* NavigationBuilder.swift in Sources */,
 				83971999269A8DCE0084E33C /* HttpRouter.swift in Sources */,
