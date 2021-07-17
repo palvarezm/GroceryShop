@@ -19,9 +19,11 @@ protocol CategoryListViewControllerProtocol: class {
 protocol CategoryListPresenterProtocol: class {
     var view: CategoryListViewControllerProtocol? { get set }
     var interactor: CategoryListInteractorInputProtocol? { get set }
+    var imageInteractor: ImageInteractorProtocol? { get set }
     var router: CategoryListRouterProtocol { get set }
     
     func viewDidLoad() -> Void
+    func onFetchImage(imageName: String, completion: @escaping ImageClosure)
     func onTapCategoryItem(usingCategory category: CategoryItemViewModel)
 }
 

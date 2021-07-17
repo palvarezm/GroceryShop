@@ -20,6 +20,9 @@ extension CategoryListViewController: UITableViewDataSource, UITableViewDelegate
             debugPrint("\(category)")
             self?.presenter?.onTapCategoryItem(usingCategory: category)
         }
+        self.presenter?.onFetchImage(imageName: categoryViewModel.image) { image in
+            cell.categoryCard.setImage(using: image)
+        }
         
         return cell
     }

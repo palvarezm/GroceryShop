@@ -13,10 +13,6 @@ class CategoryListInteractor: CategoryListInteractorInputProtocol {
     var remoteDataManager: CategoryListRemoteDataManagerInputProtocol?
         
     func retrieveCategories() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
         do {
             if let localCategories = try localDataManager?.retrieveCategories() {
                 if localCategories.isEmpty {

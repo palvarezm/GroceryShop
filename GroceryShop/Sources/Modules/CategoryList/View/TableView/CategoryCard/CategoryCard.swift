@@ -62,6 +62,7 @@ class CategoryCard: UIView {
     
     func setImage(using image: UIImage) -> (Void) {
         backgroundImage.image = image
+        backgroundImage.contentMode = .scaleAspectFill
     }
     
     func setHandler(categorySelectionHandler: @escaping CategorySelectionHandler) {

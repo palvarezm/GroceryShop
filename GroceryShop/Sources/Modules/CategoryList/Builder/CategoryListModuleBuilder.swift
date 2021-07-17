@@ -22,8 +22,11 @@ class CategoryListModuleBuilder {
         categoryListInteractor.remoteDataManager = remoteDataManager
         remoteDataManager.remoteRequestHandler = categoryListInteractor
         
+        let imageRemoteDataManager: ImageRemoteDataManagerProtocol = ImageRemoteDataManager()
+        let imageInteractor = ImageInteractor(service: imageRemoteDataManager)
+        
         let router = CategoryListRouter(viewController: viewController)
-        let presenter = CategoryListPresenter(view: viewController, router: router, interactor: categoryListInteractor)
+        let presenter = CategoryListPresenter(view: viewController, router: router, interactor: categoryListInteractor, imageInteractor: imageInteractor)
         
         categoryListInteractor.presenter = presenter
         viewController.presenter = presenter

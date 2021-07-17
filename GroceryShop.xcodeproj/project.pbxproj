@@ -46,6 +46,10 @@
 		8397199E269A8E400084E33C /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397199D269A8E400084E33C /* HttpService.swift */; };
 		839719A3269A93780084E33C /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839719A2269A93780084E33C /* RealmDatabase.swift */; };
 		839719A8269A93C80084E33C /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839719A7269A93C80084E33C /* StubService.swift */; };
+		8398004726A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8398004626A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift */; };
+		8398004D26A28FAA002411B6 /* ImageHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8398004C26A28FAA002411B6 /* ImageHttpService.swift */; };
+		8398005226A29591002411B6 /* ImageHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8398005126A29591002411B6 /* ImageHttpRouter.swift */; };
+		8398005726A2A242002411B6 /* ImageRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8398005626A2A242002411B6 /* ImageRemoteDataManager.swift */; };
 		83A77DE3269CD0BF00F36CF3 /* CategoryListTableViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77DE2269CD0BF00F36CF3 /* CategoryListTableViewController+TableView.swift */; };
 		83A77DF0269CE79700F36CF3 /* GroceryHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77DEF269CE79700F36CF3 /* GroceryHttpRouter.swift */; };
 		83A77DFD269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77DFC269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift */; };
@@ -121,6 +125,10 @@
 		8397199D269A8E400084E33C /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		839719A2269A93780084E33C /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
 		839719A7269A93C80084E33C /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
+		8398004626A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
+		8398004C26A28FAA002411B6 /* ImageHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHttpService.swift; sourceTree = "<group>"; };
+		8398005126A29591002411B6 /* ImageHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHttpRouter.swift; sourceTree = "<group>"; };
+		8398005626A2A242002411B6 /* ImageRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataManager.swift; sourceTree = "<group>"; };
 		83A77DE2269CD0BF00F36CF3 /* CategoryListTableViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryListTableViewController+TableView.swift"; sourceTree = "<group>"; };
 		83A77DEF269CE79700F36CF3 /* GroceryHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryHttpRouter.swift; sourceTree = "<group>"; };
 		83A77DFC269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListRemoteDataManager.swift; sourceTree = "<group>"; };
@@ -476,6 +484,7 @@
 			children = (
 				83971998269A8DCE0084E33C /* HttpRouter.swift */,
 				8397199D269A8E400084E33C /* HttpService.swift */,
+				8398004B26A28F90002411B6 /* Image */,
 				8394BF13269BDA0D00EA2ADA /* Model */,
 			);
 			path = Remote;
@@ -495,6 +504,17 @@
 				839719A7269A93C80084E33C /* StubService.swift */,
 			);
 			path = MockService;
+			sourceTree = "<group>";
+		};
+		8398004B26A28F90002411B6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				8398004C26A28FAA002411B6 /* ImageHttpService.swift */,
+				8398005126A29591002411B6 /* ImageHttpRouter.swift */,
+				8398004626A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift */,
+				8398005626A2A242002411B6 /* ImageRemoteDataManager.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		83A77E0C269D30E700F36CF3 /* Model */ = {
@@ -762,7 +782,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8394BF16269BDA4200EA2ADA /* CategoryListResponse.swift in Sources */,
+				8398004D26A28FAA002411B6 /* ImageHttpService.swift in Sources */,
 				83971901269A51DE0084E33C /* AppDelegate.swift in Sources */,
+				8398005226A29591002411B6 /* ImageHttpRouter.swift in Sources */,
 				8394BECE269BBA6E00EA2ADA /* TabBarModuleBuilder.swift in Sources */,
 				8394BEC1269BB83A00EA2ADA /* TabBarController.swift in Sources */,
 				83971903269A51DE0084E33C /* SceneDelegate.swift in Sources */,
@@ -774,6 +796,7 @@
 				83971972269A7AF60084E33C /* UIVIew+Extension.swift in Sources */,
 				8394BEF2269BCCEB00EA2ADA /* CategoryListRouter.swift in Sources */,
 				8394BF28269BDF3A00EA2ADA /* CategoryListProtocols.swift in Sources */,
+				8398004726A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift in Sources */,
 				83A77DFD269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift in Sources */,
 				83A77E16269D311400F36CF3 /* LocalCategoryItem.swift in Sources */,
 				8397197C269A7BF80084E33C /* UIColor+Extension.swift in Sources */,
@@ -785,6 +808,7 @@
 				8394BF1C269BDA9100EA2ADA /* BaseImage.swift in Sources */,
 				8394BEFC269BCD0800EA2ADA /* CategoryListModuleBuilder.swift in Sources */,
 				838E4536269E8E9E00B7DB82 /* CategoryTableViewCell.swift in Sources */,
+				8398005726A2A242002411B6 /* ImageRemoteDataManager.swift in Sources */,
 				8394BED6269BBB0200EA2ADA /* TabBarRouter.swift in Sources */,
 				839719A3269A93780084E33C /* RealmDatabase.swift in Sources */,
 				8397195E269A79D40084E33C /* NavigationBuilder.swift in Sources */,
