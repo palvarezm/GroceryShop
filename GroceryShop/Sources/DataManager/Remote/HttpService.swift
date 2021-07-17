@@ -7,7 +7,9 @@
 
 import Alamofire
 
-protocol HttpService {
-    var session: Session { get set }
-    func request(_ urlRequest: URLRequestConvertible) -> DataRequest
+final class HttpService {
+    var session = Session.default
+    func request(_ urlRequest: URLRequestConvertible) -> DataRequest {
+        return session.request(urlRequest).validate(statusCode: 200..<400)
+    }
 }

@@ -50,7 +50,7 @@ class LoadingIndicatorView {
             overlay.addSubview(label)
             label.translatesAutoresizingMaskIntoConstraints = false
             label.topAnchor.constraint(equalTo: indicator.bottomAnchor, constant: 16).isActive = true
-            label.centerXAnchor.constraint(equalTo: indicator.centerXAnchor, constant: 16).isActive = true
+            label.centerXAnchor.constraint(equalTo: indicator.centerXAnchor).isActive = true
             currentLabel = label
         }
         
