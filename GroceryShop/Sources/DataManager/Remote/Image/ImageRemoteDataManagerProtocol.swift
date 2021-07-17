@@ -9,6 +9,6 @@ import UIKit
 
 typealias ImageClosure = (UIImage) -> (Void)
 
-protocol ImageRemoteDataManagerInputProtocol {
+protocol ImageRemoteDataManagerProtocol {
     func fetchImage(imageName: String, completion: @escaping ImageClosure) -> Void
 }
