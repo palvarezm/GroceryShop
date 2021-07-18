@@ -16,5 +16,7 @@ class CategoryListRouter {
 }
 
 extension CategoryListRouter: CategoryListRouterProtocol {
-    
+    func navigateToCategoryGroceries(usingCategory category: CategoryItemViewModel) {
+        //TODO Call builder for grocery list view and navigate
+    }
 }

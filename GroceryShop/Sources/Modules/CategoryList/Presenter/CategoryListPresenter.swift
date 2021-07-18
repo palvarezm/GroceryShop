@@ -33,7 +33,7 @@ extension CategoryListPresenter: CategoryListPresenterProtocol {
     }
     
     func onTapCategoryItem(usingCategory category: CategoryItemViewModel) {
-        
+        router.navigateToCategoryGroceries(usingCategory: category)
     }
 }
 

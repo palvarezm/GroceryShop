@@ -26,6 +26,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-bk-w9t">
                     <rect key="frame" x="0.0" y="0.0" width="409" height="176"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="onTapContainer:" destination="-1" eventType="touchUpInside" id="zc8-F1-Kt3"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-3A-xfS">
                     <rect key="frame" x="0.0" y="0.0" width="409" height="176"/>

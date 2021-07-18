@@ -61,5 +61,5 @@ protocol CategoryListLocalDataManagerInputProtocol: class {
 }
 
 protocol CategoryListRouterProtocol: class {
-    
+    func navigateToCategoryGroceries(usingCategory category: CategoryItemViewModel)
 }

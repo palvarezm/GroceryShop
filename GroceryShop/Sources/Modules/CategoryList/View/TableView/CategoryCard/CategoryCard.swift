@@ -58,6 +58,7 @@ class CategoryCard: UIView {
         containerButton.setTitle("", for: .normal)
         contentView.bringSubviewToFront(containerButton)
         backgroundImage.image = UIImage(named: "category-placeholder")
+        backgroundImage.backgroundColor = .white
     }
     
     func setImage(using image: UIImage) -> (Void) {
