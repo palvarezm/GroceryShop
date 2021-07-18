@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let submodules = (
-            home: UIViewController(),
+            home: CategoryListModuleBuilder.build(usingNavigationFactory: NavigationBuilder.build),
             cart: UIViewController(),
             profile: UIViewController())
         let tabBarViewController = TabBarModuleBuilder.build(usingSubmodules: submodules)
