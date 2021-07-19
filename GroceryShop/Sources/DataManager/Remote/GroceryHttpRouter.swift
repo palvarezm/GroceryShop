@@ -9,6 +9,7 @@ import Alamofire
 
 enum GroceryHttpRouter {
     case getCategories
+    case getGroceries(categoryId: Int)
 }
 
 extension GroceryHttpRouter: HttpRouter {
@@ -19,12 +20,14 @@ extension GroceryHttpRouter: HttpRouter {
     var path: String {
         switch (self) {
         case .getCategories: return "/categories"
+        case .getGroceries(let categoryId): return "/category/\(categoryId)"
         }
     }
     
     var method: HTTPMethod {
         switch (self) {
         case .getCategories: return .get
+        case . getGroceries: return .get
         }
     }
     
@@ -40,7 +43,7 @@ extension GroceryHttpRouter: HttpRouter {
     
     func body() throws -> Data? {
         switch (self) {
-        case .getCategories: return nil
+        case .getCategories, .getGroceries: return nil
         }
     }
 }
