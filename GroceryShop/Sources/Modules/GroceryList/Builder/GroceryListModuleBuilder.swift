@@ -14,11 +14,11 @@ class GroceryListModuleBuilder {
     
     static func build(usingCategory category: CategoryItemViewModel) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: GroceryListViewController.self)) as! GroceryListViewController
-        //let localDataManager: GroceryListLocalDataManagerInputProtocol = GroceryListLocalDataManager()
+        let localDataManager: GroceryListLocalDataManagerInputProtocol = GroceryListLocalDataManager()
         let remoteDataManager: GroceryListRemoteDataManagerInputProtocol = GroceryListRemoteDataManager()
         let groceryListInteractor = GroceryListInteractor()
         groceryListInteractor.remoteDataManager = remoteDataManager
-        groceryListInteractor.localDataManager = nil
+        groceryListInteractor.localDataManager = localDataManager
         remoteDataManager.remoteRequestHandler = groceryListInteractor
         
         let imageRemoteDataManager = ImageRemoteDataManager()

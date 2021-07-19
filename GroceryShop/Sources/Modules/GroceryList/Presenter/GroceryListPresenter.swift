@@ -65,16 +65,24 @@ struct GroceryItemViewModel {
     let price: String
     
     init(using grocery: GroceryResponse) {
-        let sku = grocery.skuData.skus.first
-        self.skuId = String(describing: sku?.skuId)
+        if let sku = grocery.skuData.skus.first {
+            self.skuId = String(describing: sku.skuId)
+            self.price = sku.price.formatAsStringPrice()
+        }
+        else {
+            self.skuId = ""
+            self.price = ""            
+        }
         self.title = grocery.title
         self.details = grocery.details
         self.image = grocery.image.name
-        if let numericPrice = sku?.price {
-            self.price = numericPrice.formatAsStringPrice()
-        }
-        else {
-            self.price = ""
-        }
+    }
+    
+    init(localGroceryItem: LocalGroceryItem) {
+        self.skuId = String(describing: localGroceryItem.skuId)
+        self.title = localGroceryItem.title
+        self.details = localGroceryItem.details
+        self.image = localGroceryItem.image
+        self.price = localGroceryItem.price
     }
 }

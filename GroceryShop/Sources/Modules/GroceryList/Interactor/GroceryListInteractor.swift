@@ -17,7 +17,7 @@ class GroceryListInteractor: GroceryListInteractorInputProtocol {
                     remoteDataManager?.retrieveGroceries(using: category)
                 }
                 else {
-                    presenter?.didRetrieveGroceries(groceries: groceryList, imageBannerName: "")
+                    presenter?.didRetrieveGroceries(groceries: groceryList, imageBannerName: category.image)
                 }
             }
             else {
@@ -25,7 +25,7 @@ class GroceryListInteractor: GroceryListInteractorInputProtocol {
             }
         }
         catch {
-            presenter?.didRetrieveGroceries(groceries: [], imageBannerName: "")
+            presenter?.didRetrieveGroceries(groceries: [], imageBannerName: category.image)
         }
     }
 }
