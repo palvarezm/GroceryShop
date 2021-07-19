@@ -61,6 +61,9 @@
 		83A2006E26A51E82007D7E32 /* GroceryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2006D26A51E82007D7E32 /* GroceryListRouter.swift */; };
 		83A2007326A5328D007D7E32 /* GroceryListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2007226A5328D007D7E32 /* GroceryListLocalDataManager.swift */; };
 		83A2007C26A534A1007D7E32 /* LocalGroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2007B26A534A1007D7E32 /* LocalGroceryItem.swift */; };
+		83A2008326A5433C007D7E32 /* GroceryListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2008226A5433C007D7E32 /* GroceryListViewController+TableView.swift */; };
+		83A2008C26A546A1007D7E32 /* GroceryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2008A26A546A1007D7E32 /* GroceryTableViewCell.swift */; };
+		83A2008D26A546A1007D7E32 /* GroceryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A2008B26A546A1007D7E32 /* GroceryTableViewCell.xib */; };
 		83A77DE3269CD0BF00F36CF3 /* CategoryListTableViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77DE2269CD0BF00F36CF3 /* CategoryListTableViewController+TableView.swift */; };
 		83A77DF0269CE79700F36CF3 /* GroceryHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77DEF269CE79700F36CF3 /* GroceryHttpRouter.swift */; };
 		83A77DFD269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77DFC269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift */; };
@@ -151,6 +154,9 @@
 		83A2006D26A51E82007D7E32 /* GroceryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListRouter.swift; sourceTree = "<group>"; };
 		83A2007226A5328D007D7E32 /* GroceryListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListLocalDataManager.swift; sourceTree = "<group>"; };
 		83A2007B26A534A1007D7E32 /* LocalGroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGroceryItem.swift; sourceTree = "<group>"; };
+		83A2008226A5433C007D7E32 /* GroceryListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryListViewController+TableView.swift"; sourceTree = "<group>"; };
+		83A2008A26A546A1007D7E32 /* GroceryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewCell.swift; sourceTree = "<group>"; };
+		83A2008B26A546A1007D7E32 /* GroceryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryTableViewCell.xib; sourceTree = "<group>"; };
 		83A77DE2269CD0BF00F36CF3 /* CategoryListTableViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryListTableViewController+TableView.swift"; sourceTree = "<group>"; };
 		83A77DEF269CE79700F36CF3 /* GroceryHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryHttpRouter.swift; sourceTree = "<group>"; };
 		83A77DFC269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListRemoteDataManager.swift; sourceTree = "<group>"; };
@@ -590,6 +596,7 @@
 		83A2003926A4E334007D7E32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83A2008126A5431A007D7E32 /* TableView */,
 				83A2005E26A51BFD007D7E32 /* GroceryListViewController.swift */,
 				83A2006326A51C06007D7E32 /* GroceryList.storyboard */,
 			);
@@ -636,6 +643,16 @@
 				83A2007B26A534A1007D7E32 /* LocalGroceryItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		83A2008126A5431A007D7E32 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				83A2008226A5433C007D7E32 /* GroceryListViewController+TableView.swift */,
+				83A2008A26A546A1007D7E32 /* GroceryTableViewCell.swift */,
+				83A2008B26A546A1007D7E32 /* GroceryTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		83A77E0C269D30E700F36CF3 /* Model */ = {
@@ -776,6 +793,7 @@
 				83A2006426A51C06007D7E32 /* GroceryList.storyboard in Resources */,
 				8397198C269A8BA30084E33C /* products-response.json in Resources */,
 				8397190A269A51DF0084E33C /* Assets.xcassets in Resources */,
+				83A2008D26A546A1007D7E32 /* GroceryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,8 +940,10 @@
 				8394BEF2269BCCEB00EA2ADA /* CategoryListRouter.swift in Sources */,
 				83A2007326A5328D007D7E32 /* GroceryListLocalDataManager.swift in Sources */,
 				8394BF28269BDF3A00EA2ADA /* CategoryListProtocols.swift in Sources */,
+				83A2008C26A546A1007D7E32 /* GroceryTableViewCell.swift in Sources */,
 				83A2005526A4FEC1007D7E32 /* GroceryListInteractor.swift in Sources */,
 				8398004726A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift in Sources */,
+				83A2008326A5433C007D7E32 /* GroceryListViewController+TableView.swift in Sources */,
 				83A2004526A4EA4A007D7E32 /* GroceryListPresenter.swift in Sources */,
 				83A77DFD269CF1C000F36CF3 /* CategoryListRemoteDataManager.swift in Sources */,
 				83A77E16269D311400F36CF3 /* LocalCategoryItem.swift in Sources */,

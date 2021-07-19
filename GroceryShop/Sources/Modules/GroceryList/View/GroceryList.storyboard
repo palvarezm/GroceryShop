@@ -15,9 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="pLg-H8-qyf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AB8-w5-9hi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="GV1-Zf-f0X"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qh3-zS-SsJ">
+                                <rect key="frame" x="0.0" y="172" width="414" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvV-Oh-gxM">
+                                <rect key="frame" x="12" y="56" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onBackButtonTap:" destination="koI-wK-KBq" eventType="touchUpInside" id="NzY-1G-9jX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8qQ-w3-vaf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qh3-zS-SsJ" firstAttribute="trailing" secondItem="8qQ-w3-vaf" secondAttribute="trailing" id="GT2-DI-y7U"/>
+                            <constraint firstItem="dvV-Oh-gxM" firstAttribute="leading" secondItem="AB8-w5-9hi" secondAttribute="leading" constant="12" id="Lak-T7-6eR"/>
+                            <constraint firstItem="Qh3-zS-SsJ" firstAttribute="top" secondItem="AB8-w5-9hi" secondAttribute="bottom" id="MHS-tb-NmO"/>
+                            <constraint firstItem="8qQ-w3-vaf" firstAttribute="trailing" secondItem="AB8-w5-9hi" secondAttribute="trailing" id="QXf-69-W5y"/>
+                            <constraint firstItem="Qh3-zS-SsJ" firstAttribute="leading" secondItem="8qQ-w3-vaf" secondAttribute="leading" id="TDI-En-q83"/>
+                            <constraint firstItem="AB8-w5-9hi" firstAttribute="top" secondItem="8qQ-w3-vaf" secondAttribute="top" id="VCy-1G-GL5"/>
+                            <constraint firstItem="dvV-Oh-gxM" firstAttribute="top" secondItem="AB8-w5-9hi" secondAttribute="top" constant="12" id="VhB-K5-bz5"/>
+                            <constraint firstItem="AB8-w5-9hi" firstAttribute="leading" secondItem="8qQ-w3-vaf" secondAttribute="leading" id="j8b-bD-dC9"/>
+                            <constraint firstItem="8qQ-w3-vaf" firstAttribute="bottom" secondItem="Qh3-zS-SsJ" secondAttribute="bottom" id="kLg-Iz-Lgo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="dvV-Oh-gxM" id="XMw-j9-puD"/>
+                        <outlet property="categoryImageBanner" destination="AB8-w5-9hi" id="TDl-ba-aTA"/>
+                        <outlet property="groceryListTableView" destination="Qh3-zS-SsJ" id="2DY-Ps-JTL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNW-8H-ndn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

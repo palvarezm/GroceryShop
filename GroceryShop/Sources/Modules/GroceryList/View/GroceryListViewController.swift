@@ -9,15 +9,29 @@ import UIKit
 
 class GroceryListViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var categoryImageBanner: UIImageView!
+    @IBOutlet weak var groceryListTableView: UITableView!
+    
     var presenter: GroceryListPresenterProtocol?
     
     var groceryList: [GroceryItemViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoadingIndicatorView.show(view.self, loadingText: "loading_view_text".localized)
+        backButton.setTitle("", for: .normal)
+        backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        groceryListTableView.delegate = self
+        groceryListTableView.dataSource = self
+        groceryListTableView.register(UINib(nibName: String(describing: GroceryTableViewCell.self), bundle: nil), forCellReuseIdentifier: GroceryTableViewCell.identifier)
+        categoryImageBanner.contentMode = .scaleAspectFill
         presenter?.viewDidLoad()
     }
 
+    @IBAction func onBackButtonTap(_ sender: Any) {
+        presenter?.onTapBack()
+    }
 }
 
 extension GroceryListViewController: GroceryListViewProtocol {
@@ -28,7 +42,7 @@ extension GroceryListViewController: GroceryListViewProtocol {
     }
     
     func updateImageBanner(image: UIImage) {
-        debugPrint("Image updated")
+        categoryImageBanner.image = image
     }
     
     func showError() {
