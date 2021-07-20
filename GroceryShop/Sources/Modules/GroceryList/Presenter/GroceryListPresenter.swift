@@ -28,6 +28,12 @@ class GroceryListPresenter: GroceryListPresenterProtocol {
         interactor?.retrieveGroceries(using: category)
     }
     
+    func onThumbnailUpdate(imageName: String, completion: @escaping ImageClosure) {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            self?.imageInteractor?.fetchImage(imageName: imageName, completion: completion)
+        }
+    }
+    
     func onAddToCart() {
         
     }
