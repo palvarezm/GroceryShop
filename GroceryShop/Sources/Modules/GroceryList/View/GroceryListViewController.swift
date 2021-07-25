@@ -22,10 +22,10 @@ class GroceryListViewController: UIViewController {
         LoadingIndicatorView.show(view.self, loadingText: "loading_view_text".localized)
         backButton.setTitle("", for: .normal)
         backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        categoryImageBanner.image = UIImage(named: "category-placeholder")
         groceryListTableView.delegate = self
         groceryListTableView.dataSource = self
         groceryListTableView.register(UINib(nibName: String(describing: GroceryTableViewCell.self), bundle: nil), forCellReuseIdentifier: GroceryTableViewCell.identifier)
-        categoryImageBanner.contentMode = .scaleAspectFill
         presenter?.viewDidLoad()
     }
 
@@ -44,6 +44,7 @@ extension GroceryListViewController: GroceryListViewProtocol {
     
     func updateImageBanner(image: UIImage) {
         categoryImageBanner.image = image
+        categoryImageBanner.contentMode = .scaleAspectFill
     }
     
     func showError() {
