@@ -56,6 +56,10 @@ class GroceryListPresenter: GroceryListPresenterProtocol {
     func onTapBack() {
         router?.navigateBackToCategoryList()
     }
+    
+    func onDismissErrorAlert() {
+        router?.navigateBackToCategoryList()
+    }
 }
 
 extension GroceryListPresenter: GroceryListInteractorOutputProtocol {  

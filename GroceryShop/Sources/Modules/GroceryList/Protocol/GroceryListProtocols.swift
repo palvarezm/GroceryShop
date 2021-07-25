@@ -28,6 +28,7 @@ protocol GroceryListPresenterProtocol: class {
     func onAddToCart(cartItem: CartItem)
     func onThumbnailUpdate(imageName: String, completion: @escaping ImageClosure)
     func onTapBack() -> Void
+    func onDismissErrorAlert() -> Void
 }
 
 protocol GroceryListInteractorInputProtocol: class {

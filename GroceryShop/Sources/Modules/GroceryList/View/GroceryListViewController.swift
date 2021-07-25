@@ -39,7 +39,6 @@ extension GroceryListViewController: GroceryListViewProtocol {
     func showGroceryList(groceryList: [GroceryItemViewModel]) {
         self.groceryList = groceryList
         self.groceryListTableView.reloadData()
-        debugPrint(groceryList)
     }
     
     func updateImageBanner(image: UIImage) {
@@ -48,7 +47,9 @@ extension GroceryListViewController: GroceryListViewProtocol {
     }
     
     func showError() {
-        debugPrint("Error")
+        showInfoAlert(message: "generic_error".localized) { [weak self] _ in
+            self?.presenter?.onDismissErrorAlert()
+        }
     }
     
     func showLoading() {

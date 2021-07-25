@@ -17,7 +17,6 @@ extension CategoryListViewController: UITableViewDataSource, UITableViewDelegate
         let categoryViewModel = categories[indexPath.row]
         cell.categoryCard.categoryViewModel = categoryViewModel
         cell.categoryCard.setHandler { [weak self] category in
-            debugPrint("\(category)")
             self?.presenter?.onTapCategoryItem(usingCategory: category)
         }
         self.presenter?.onFetchImage(imageName: categoryViewModel.image) { image in
