@@ -8,19 +8,19 @@
 import RealmSwift
 
 class LocalCartItem: Object {
-    @objc dynamic var skuId: String = ""
+    @objc dynamic var id: String = ""
     @objc dynamic var value: Int = 0
     @objc dynamic var updated: Date = Date()
     
     override static func primaryKey() -> String? {
-        return "skuId"
+        return "id"
     }
 }
 
 extension LocalCartItem {
     convenience init(cartItem: CartItem) {
         self.init()
-        self.skuId = cartItem.skuId
+        self.id = cartItem.id
         self.value = cartItem.value
     }
 }

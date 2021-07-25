@@ -67,19 +67,19 @@ final class ItemCounter: UIView {
     
     @IBAction func onAddToCartTap(_ sender: Any) {
         itemCounterViewModel.addToCart()
-        let cartItem = CartItem(skuId: itemCounterViewModel.id, value: itemCounterViewModel.counterValue)
+        let cartItem = CartItem(id: itemCounterViewModel.id, value: itemCounterViewModel.counterValue)
         onCounterChangeClosure?(cartItem)
     }
     
     @IBAction func onSubstractTap(_ sender: Any) {
         itemCounterViewModel.onDecrement()
-        let cartItem = CartItem(skuId: itemCounterViewModel.id, value: itemCounterViewModel.counterValue)
+        let cartItem = CartItem(id: itemCounterViewModel.id, value: itemCounterViewModel.counterValue)
         onCounterChangeClosure?(cartItem)
     }
     
     @IBAction func onAddTap(_ sender: Any) {
         itemCounterViewModel.onIncrement()
-        let cartItem = CartItem(skuId: itemCounterViewModel.id, value: itemCounterViewModel.counterValue)
+        let cartItem = CartItem(id: itemCounterViewModel.id, value: itemCounterViewModel.counterValue)
         onCounterChangeClosure?(cartItem)
     }
 }

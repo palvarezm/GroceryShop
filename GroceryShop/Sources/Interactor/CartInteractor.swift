@@ -8,7 +8,7 @@
 protocol CartInteractorProtocol {
     var localDataManager: CartLocalDataManagerProtocol { get set }
     
-    func getCartItem(skuId: String) -> (CartItem)
+    func getCartItem(id: String) -> (CartItem)
     func getCartCount(closure: @escaping CartCountClosure) -> (Void)
     func addToCart(cartItem: CartItem) -> (Void)
 }
@@ -22,8 +22,8 @@ class CartInteractor {
 }
 
 extension CartInteractor: CartInteractorProtocol {
-    func getCartItem(skuId: String) -> (CartItem) {
-        self.localDataManager.getCartItem(usingSkuId: skuId)
+    func getCartItem(id: String) -> (CartItem) {
+        self.localDataManager.getCartItem(usingId: id)
     }
     
     func getCartCount(closure: @escaping CartCountClosure) {

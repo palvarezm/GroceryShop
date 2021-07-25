@@ -31,9 +31,9 @@ class GroceryListPresenter: GroceryListPresenterProtocol {
         view?.showLoading()
         interactor?.retrieveGroceries(using: category) { [weak self] groceries in
             return groceries.map { grocery -> GroceryItemViewModel in
-                let cartItem = self?.cartInteractor?.getCartItem(skuId: grocery.skuId)
+                let cartItem = self?.cartInteractor?.getCartItem(id: grocery.id)
                 guard let safeCartItem = cartItem else { return grocery }
-                let itemCounterViewModel = ItemCounterViewModel(id: safeCartItem.skuId, counterValue: safeCartItem.value)
+                let itemCounterViewModel = ItemCounterViewModel(id: safeCartItem.id, counterValue: safeCartItem.value)
                 var result = grocery
                 result.itemCounterViewModel = itemCounterViewModel
                 return result
@@ -78,7 +78,8 @@ extension GroceryListPresenter: GroceryListInteractorOutputProtocol {
 }
 
 struct GroceryItemViewModel {
-    let skuId: String
+    let id: String
+    let categoryId: String
     let title: String
     let details: String
     let image: String
@@ -86,14 +87,9 @@ struct GroceryItemViewModel {
     var itemCounterViewModel: ItemCounterViewModel
     
     init(using grocery: GroceryResponse) {
-        if let sku = grocery.skuData.skus.first {
-            self.skuId = String(describing: sku.skuId)
-            self.price = sku.price.formatAsStringPrice()
-        }
-        else {
-            self.skuId = UUID.init().uuidString
-            self.price = ""
-        }
+        self.id = String(describing: grocery.id)
+        self.categoryId = String(describing: grocery.categoryId)
+        self.price = grocery.skuData.skus.first?.price.formatAsStringPrice() ?? ""
         self.title = grocery.title
         self.details = grocery.details
         self.image = grocery.image.name
@@ -101,7 +97,8 @@ struct GroceryItemViewModel {
     }
     
     init(localGroceryItem: LocalGroceryItem) {
-        self.skuId = String(describing: localGroceryItem.skuId)
+        self.id = String(describing: localGroceryItem.id)
+        self.categoryId = localGroceryItem.categoryId
         self.title = localGroceryItem.title
         self.details = localGroceryItem.details
         self.image = localGroceryItem.image

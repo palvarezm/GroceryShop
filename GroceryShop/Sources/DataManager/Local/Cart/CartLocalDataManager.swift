@@ -19,11 +19,11 @@ class CartLocalDataManager {
 }
 
 extension CartLocalDataManager: CartLocalDataManagerProtocol {
-    func getCartItem(usingSkuId skuId: String) -> CartItem {
+    func getCartItem(usingId id: String) -> CartItem {
         let realm = try! Realm()
-        guard let localCartItem = realm.objects(LocalCartItem.self).first(where: { $0.skuId == skuId })
+        guard let localCartItem = realm.objects(LocalCartItem.self).first(where: { $0.id == id })
         else {
-            return CartItem(skuId: skuId, value: 0)
+            return CartItem(id: id, value: 0)
         }
         return CartItem(localCartItem: localCartItem)
     }
@@ -52,7 +52,7 @@ extension CartLocalDataManager: CartLocalDataManagerProtocol {
         do {
             let realm = try! Realm()
             try realm.write {
-                if let localCartItem = realm.objects(LocalCartItem.self).first(where: { $0.skuId == cartItem.skuId}) {
+                if let localCartItem = realm.objects(LocalCartItem.self).first(where: { $0.id == cartItem.id}) {
                     realm.delete(localCartItem)
                 }
             }

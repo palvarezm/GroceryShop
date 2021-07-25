@@ -6,18 +6,18 @@
 //
 
 struct CartItem {
-    let skuId: String
+    let id: String
     let value: Int
     
-    init(skuId: String, value: Int) {
-        self.skuId = skuId
+    init(id: String, value: Int) {
+        self.id = id
         self.value = value
     }
 }
 
 extension CartItem {
     init(localCartItem: LocalCartItem) {
-        self.skuId = localCartItem.skuId
+        self.id = localCartItem.id
         self.value = localCartItem.value
     }
 }

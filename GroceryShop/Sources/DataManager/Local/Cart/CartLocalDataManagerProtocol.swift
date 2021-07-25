@@ -8,7 +8,7 @@
 typealias CartCountClosure = (Int) -> (Void)
 
 protocol CartLocalDataManagerProtocol {
-    func getCartItem(usingSkuId skuId: String) -> CartItem
+    func getCartItem(usingId id: String) -> CartItem
     func getCount(closure: @escaping CartCountClosure) -> Void
     func updateCart(usingCartItem cartItem: CartItem)
     func deleteItem(usingCartItem cartItem: CartItem)

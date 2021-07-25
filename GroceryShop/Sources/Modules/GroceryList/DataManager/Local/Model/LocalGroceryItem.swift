@@ -8,21 +8,23 @@
 import RealmSwift
 
 class LocalGroceryItem: Object {
-    @objc dynamic var skuId: String = ""
+    @objc dynamic var id: String = ""
+    @objc dynamic var categoryId: String = ""
     @objc dynamic var title: String = ""
     @objc dynamic var details: String = ""
     @objc dynamic var image: String = ""
     @objc dynamic var price: String = ""
     
     override class func primaryKey() -> String? {
-        return "skuId"
+        return "id"
     }
 }
 
 extension LocalGroceryItem {
     convenience init(groceryItem: GroceryItemViewModel) {
         self.init()
-        self.skuId = groceryItem.skuId
+        self.id = groceryItem.id
+        self.categoryId = groceryItem.categoryId
         self.title = groceryItem.title
         self.details = groceryItem.details
         self.image = groceryItem.image

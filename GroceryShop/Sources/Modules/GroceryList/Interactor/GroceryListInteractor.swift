@@ -13,7 +13,9 @@ class GroceryListInteractor: GroceryListInteractorInputProtocol {
     func retrieveGroceries(using category: CategoryItemViewModel, addCartItemClosure: @escaping AddCartItemClosure) {
         do {
             if let groceryList = try localDataManager?.retrieveGroceries(using: category) {
-                if groceryList.isEmpty {
+                let locallyStoredCategories = Set(groceryList.map { $0.categoryId })
+                let stringCategoryId = String(describing: category.id)
+                if !locallyStoredCategories.contains(stringCategoryId) {
                     remoteDataManager?.retrieveGroceries(using: category, addCartItemClosure: addCartItemClosure)
                 }
                 else {
