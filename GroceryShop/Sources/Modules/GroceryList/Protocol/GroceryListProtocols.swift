@@ -21,10 +21,11 @@ protocol GroceryListPresenterProtocol: class {
     var view: GroceryListViewProtocol? { get set }
     var interactor: GroceryListInteractorInputProtocol? { get set }
     var imageInteractor: ImageInteractorProtocol? { get set }
+    var cartInteractor: CartInteractorProtocol? { get set }
     var router: GroceryListRouterProtocol? { get set }
     
     func viewDidLoad()
-    func onAddToCart()
+    func onAddToCart(cartItem: CartItem)
     func onThumbnailUpdate(imageName: String, completion: @escaping ImageClosure)
     func onTapBack() -> Void
 }
@@ -34,7 +35,7 @@ protocol GroceryListInteractorInputProtocol: class {
     var remoteDataManager: GroceryListRemoteDataManagerInputProtocol? { get set }
     var localDataManager: GroceryListLocalDataManagerInputProtocol? { get set }
     
-    func retrieveGroceries(using category: CategoryItemViewModel)
+    func retrieveGroceries(using category: CategoryItemViewModel, addCartItemClosure: @escaping AddCartItemClosure)
 }
 
 protocol GroceryListInteractorOutputProtocol: class {
@@ -45,7 +46,7 @@ protocol GroceryListInteractorOutputProtocol: class {
 protocol GroceryListRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: GroceryListRemoteDataManagerOutputProtocol? { get set }
     
-    func retrieveGroceries(using category: CategoryItemViewModel)
+    func retrieveGroceries(using category: CategoryItemViewModel, addCartItemClosure: @escaping AddCartItemClosure)
 }
 
 protocol GroceryListRemoteDataManagerOutputProtocol: class {

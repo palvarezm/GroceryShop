@@ -23,9 +23,12 @@ class GroceryListModuleBuilder {
         
         let imageRemoteDataManager = ImageRemoteDataManager()
         let imageInteractor = ImageInteractor(service: imageRemoteDataManager)
+        
+        let cartLocalDataManager: CartLocalDataManagerProtocol = CartLocalDataManager()
+        let cartInteractor = CartInteractor(localDataManager: cartLocalDataManager)
         let router = GroceryListRouter(viewController: viewController)
                 
-        let presenter = GroceryListPresenter(view: viewController, interactor: groceryListInteractor, imageInteractor: imageInteractor, router: router, category: category)
+        let presenter = GroceryListPresenter(view: viewController, interactor: groceryListInteractor, imageInteractor: imageInteractor, cartInteractor: cartInteractor, router: router, category: category)
         
         groceryListInteractor.presenter = presenter
         viewController.presenter = presenter

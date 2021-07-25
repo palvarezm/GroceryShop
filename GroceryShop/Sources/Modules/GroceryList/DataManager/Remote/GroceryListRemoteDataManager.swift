@@ -15,7 +15,7 @@ class GroceryListRemoteDataManager {
 
 extension GroceryListRemoteDataManager: GroceryListRemoteDataManagerInputProtocol {
     
-    func retrieveGroceries(using category: CategoryItemViewModel) {
+    func retrieveGroceries(using category: CategoryItemViewModel, addCartItemClosure: @escaping AddCartItemClosure) {
         let categoryId = category.id
         do {
             try GroceryHttpRouter
@@ -26,7 +26,8 @@ extension GroceryListRemoteDataManager: GroceryListRemoteDataManagerInputProtoco
                     let groceries = groceryListResponse?.groceriesData.groceries.map { grocery in
                         return GroceryItemViewModel(using: grocery)
                     }
-                    self?.remoteRequestHandler?.onGroceriesRetrieved(groceries: groceries ?? [], imageBannerName: groceryListResponse?.image.name ?? "")
+                    let groceryList = addCartItemClosure(groceries ?? [])
+                    self?.remoteRequestHandler?.onGroceriesRetrieved(groceries: groceryList, imageBannerName: groceryListResponse?.image.name ?? "")
                 }
         }
         catch {

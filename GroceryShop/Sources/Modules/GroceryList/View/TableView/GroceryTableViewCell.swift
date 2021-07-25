@@ -14,6 +14,7 @@ class GroceryTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var itemCounter: ItemCounter!
     
     var groceryItemViewModel: GroceryItemViewModel? {
         didSet {
@@ -40,8 +41,9 @@ class GroceryTableViewCell: UITableViewCell {
         groceryImageView.image = UIImage(named: "fruitbowl")
     }
     
-    func configure(itemViewModel: GroceryItemViewModel) {
+    func configure(itemViewModel: GroceryItemViewModel, onCounterChangeClosure: @escaping OnCounterChangeClosure) {
         self.groceryItemViewModel = itemViewModel
+        itemCounter.configure(usingViewModel: itemViewModel.itemCounterViewModel, onCounterChangeClosure: onCounterChangeClosure)
     }
     
     func updateGroceryImage(image: UIImage) -> Void {

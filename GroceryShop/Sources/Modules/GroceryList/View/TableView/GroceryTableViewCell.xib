@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,34 +25,45 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hr6-gn-P3v">
-                        <rect key="frame" x="110" y="14" width="41.5" height="61.5"/>
+                        <rect key="frame" x="110" y="14" width="121" height="61.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-Pn-aiA">
-                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="121" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUW-GS-8Ie">
-                                <rect key="frame" x="0.0" y="20.5" width="41.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="20.5" width="121" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAy-3j-eM5">
-                                <rect key="frame" x="0.0" y="41" width="41.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="41" width="121" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-8w-j72" customClass="ItemCounter" customModule="GroceryShop" customModuleProvider="target">
+                        <rect key="frame" x="243" y="39" width="90" height="40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Zqd-JZ-mif"/>
+                            <constraint firstAttribute="width" constant="90" id="wVX-JI-y8S"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Hr6-gn-P3v" firstAttribute="leading" secondItem="Hya-hF-HrW" secondAttribute="trailing" constant="12" id="9cN-NF-GgP"/>
                     <constraint firstItem="Hya-hF-HrW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FP4-rU-aj8"/>
                     <constraint firstItem="Hya-hF-HrW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="RaT-t1-SXM"/>
+                    <constraint firstItem="ql0-8w-j72" firstAttribute="leading" secondItem="Hr6-gn-P3v" secondAttribute="trailing" constant="12" id="q3V-3y-4oN"/>
+                    <constraint firstItem="ql0-8w-j72" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="um3-I0-S8d"/>
                     <constraint firstItem="Hr6-gn-P3v" firstAttribute="top" secondItem="Hya-hF-HrW" secondAttribute="top" id="viA-iU-XWJ"/>
+                    <constraint firstAttribute="trailing" secondItem="ql0-8w-j72" secondAttribute="trailing" constant="8" id="yef-OH-TjQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -59,10 +71,16 @@
                 <outlet property="descriptionLabel" destination="mUW-GS-8Ie" id="uIo-kP-Pe9"/>
                 <outlet property="groceryImageView" destination="Hya-hF-HrW" id="JN9-Ke-8cO"/>
                 <outlet property="groceryInfoStackView" destination="Hr6-gn-P3v" id="1Fc-kH-gBP"/>
+                <outlet property="itemCounter" destination="ql0-8w-j72" id="wh0-cd-hOX"/>
                 <outlet property="priceLabel" destination="BAy-3j-eM5" id="rLt-6n-7aa"/>
                 <outlet property="titleLabel" destination="tNd-Pn-aiA" id="GUq-0M-zgd"/>
             </connections>
             <point key="canvasLocation" x="55.797101449275367" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

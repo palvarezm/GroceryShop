@@ -38,6 +38,7 @@ extension GroceryListViewController: GroceryListViewProtocol {
     
     func showGroceryList(groceryList: [GroceryItemViewModel]) {
         self.groceryList = groceryList
+        self.groceryListTableView.reloadData()
         debugPrint(groceryList)
     }
     

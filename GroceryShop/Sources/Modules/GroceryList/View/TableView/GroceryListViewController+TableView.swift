@@ -15,7 +15,9 @@ extension GroceryListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewModel = groceryList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: GroceryTableViewCell.identifier) as! GroceryTableViewCell
-        cell.configure(itemViewModel: viewModel)
+        cell.configure(itemViewModel: viewModel) { [weak self] cartItem in
+            self?.presenter?.onAddToCart(cartItem: cartItem)
+        }
         presenter?.onThumbnailUpdate(imageName: viewModel.image) { image in
             cell.updateGroceryImage(image: image)
         }
