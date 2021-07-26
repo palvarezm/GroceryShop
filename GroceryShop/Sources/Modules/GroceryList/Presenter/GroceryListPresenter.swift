@@ -8,32 +8,34 @@
 import Foundation
 
 typealias AddCartItemClosure = ([GroceryItemViewModel]) -> ([GroceryItemViewModel])
+typealias GroceryListUseCases = (
+    retrieveGroceries: (_ category: CategoryItemViewModel, _ addCartItemClosure: @escaping AddCartItemClosure) -> (Void),
+    fetchImage: (_ imageName: String, _ completion: @escaping ImageClosure) -> (Void),
+    getCartItem: (String) -> (CartItem),
+    addToCart: (CartItem) -> (Void)
+)
 
 class GroceryListPresenter: GroceryListPresenterProtocol {
     var view: GroceryListViewProtocol?
-    var interactor: GroceryListInteractorInputProtocol?
-    var imageInteractor: ImageInteractorProtocol?
-    var cartInteractor: CartInteractorProtocol?
+    var groceryListsUseCases: GroceryListUseCases?
     var router: GroceryListRouterProtocol?
     
     var category: CategoryItemViewModel
     
-    init(view: GroceryListViewProtocol, interactor: GroceryListInteractorInputProtocol, imageInteractor: ImageInteractorProtocol, cartInteractor: CartInteractorProtocol, router: GroceryListRouterProtocol, category: CategoryItemViewModel) {
+    init(view: GroceryListViewProtocol, useCases: GroceryListUseCases, router: GroceryListRouterProtocol, category: CategoryItemViewModel) {
         self.view = view
-        self.interactor = interactor
-        self.imageInteractor = imageInteractor
-        self.cartInteractor = cartInteractor
+        self.groceryListsUseCases = useCases
         self.router = router
         self.category = category
     }
     
     func viewDidLoad() {
         view?.showLoading()
-        interactor?.retrieveGroceries(using: category) { [weak self] groceries in
+        groceryListsUseCases?.retrieveGroceries(category) { [weak self] groceries in
             let safeCategoryId = "\(self?.category.id ?? 0)"
             let categoryGroceryList = groceries.filter { $0.categoryId == safeCategoryId }
             return categoryGroceryList.map { grocery -> GroceryItemViewModel in
-                let cartItem = self?.cartInteractor?.getCartItem(id: grocery.id)
+                let cartItem = self?.groceryListsUseCases?.getCartItem(grocery.id)
                 guard let safeCartItem = cartItem else { return grocery }
                 let itemCounterViewModel = ItemCounterViewModel(id: safeCartItem.id, counterValue: safeCartItem.value)
                 var result = grocery
@@ -45,13 +47,13 @@ class GroceryListPresenter: GroceryListPresenterProtocol {
     
     func onThumbnailUpdate(imageName: String, completion: @escaping ImageClosure) {
         DispatchQueue.global(qos: .background).async { [weak self] in
-            self?.imageInteractor?.fetchImage(imageName: imageName, completion: completion)
+            self?.groceryListsUseCases?.fetchImage(imageName, completion)
         }
     }
     
     func onAddToCart(cartItem: CartItem) {
         DispatchQueue.global(qos: .background).async {
-            self.cartInteractor?.addToCart(cartItem: cartItem)
+            self.groceryListsUseCases?.addToCart(cartItem)
         }
     }
     
@@ -69,7 +71,7 @@ extension GroceryListPresenter: GroceryListInteractorOutputProtocol {
         view?.hideLoading()
         view?.showGroceryList(groceryList: groceries)
         DispatchQueue.global(qos: .background).async { [weak self] in
-            self?.imageInteractor?.fetchImage(imageName: imageBannerName) { [weak self] image in
+            self?.groceryListsUseCases?.fetchImage(imageBannerName) { [weak self] image in
                 DispatchQueue.main.async {
                     self?.view?.updateImageBanner(image: image)
                 }
