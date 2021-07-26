@@ -32,4 +32,11 @@ extension GroceryListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120.0
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let yContentOffset = scrollView.contentOffset.y
+        let offsetDifference = previousOffsetState - yContentOffset
+        previousOffsetState = yContentOffset
+        imageBannerHeightConstraint.constant = imageBannerHeightConstraint.constant + offsetDifference
+    }
 }

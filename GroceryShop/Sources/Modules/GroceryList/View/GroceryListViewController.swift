@@ -12,11 +12,13 @@ class GroceryListViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var categoryImageBanner: UIImageView!
     @IBOutlet weak var groceryListTableView: UITableView!
+    @IBOutlet weak var imageBannerHeightConstraint: NSLayoutConstraint!
     
     var presenter: GroceryListPresenterProtocol?
     
     var groceryList: [GroceryItemViewModel] = []
-    
+    var previousOffsetState: CGFloat = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         LoadingIndicatorView.show(view.self, loadingText: "loading_view_text".localized)

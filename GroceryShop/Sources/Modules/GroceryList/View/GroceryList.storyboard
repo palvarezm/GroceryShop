@@ -52,6 +52,7 @@
                         <outlet property="backButton" destination="dvV-Oh-gxM" id="XMw-j9-puD"/>
                         <outlet property="categoryImageBanner" destination="AB8-w5-9hi" id="TDl-ba-aTA"/>
                         <outlet property="groceryListTableView" destination="Qh3-zS-SsJ" id="2DY-Ps-JTL"/>
+                        <outlet property="imageBannerHeightConstraint" destination="GV1-Zf-f0X" id="E3h-8P-xta"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNW-8H-ndn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
