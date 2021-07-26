@@ -7,17 +7,20 @@
 
 import Foundation
 
+typealias CategoryListUseCases = (
+    retrieveCategories: () -> (Void),
+    fetchImage: (_ imageName: String, _ completion: @escaping ImageClosure) -> (Void)
+)
+
 class CategoryListPresenter {
     weak var view: CategoryListViewControllerProtocol?
-    var interactor: CategoryListInteractorInputProtocol?
-    var imageInteractor: ImageInteractorProtocol?
+    var categoryListUseCases: CategoryListUseCases?
     var router: CategoryListRouterProtocol
     
-    init(view: CategoryListViewControllerProtocol, router: CategoryListRouterProtocol, interactor: CategoryListInteractorInputProtocol, imageInteractor: ImageInteractorProtocol) {
+    init(view: CategoryListViewControllerProtocol, router: CategoryListRouterProtocol, useCases: CategoryListUseCases?) {
         self.view = view
         self.router = router
-        self.interactor = interactor
-        self.imageInteractor = imageInteractor
+        self.categoryListUseCases = useCases
     }
 }
 
@@ -25,11 +28,11 @@ extension CategoryListPresenter: CategoryListPresenterProtocol {
      
     func viewDidLoad() {
         view?.showLoading()
-        interactor?.retrieveCategories()
+        categoryListUseCases?.retrieveCategories()
     }
     
     func onFetchImage(imageName: String, completion: @escaping ImageClosure) {
-        imageInteractor?.fetchImage(imageName: imageName, completion: completion)
+        categoryListUseCases?.fetchImage(imageName, completion)
     }
     
     func onTapCategoryItem(usingCategory category: CategoryItemViewModel) {
