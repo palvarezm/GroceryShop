@@ -10,8 +10,10 @@ import UIKit
 class GroceryListViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var buttonContainerView: UIView!
     @IBOutlet weak var categoryImageBanner: UIImageView!
     @IBOutlet weak var groceryListTableView: UITableView!
+    @IBOutlet weak var buttonContainerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageBannerHeightConstraint: NSLayoutConstraint!
     
     var presenter: GroceryListPresenterProtocol?
@@ -22,8 +24,11 @@ class GroceryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LoadingIndicatorView.show(view.self, loadingText: "loading_view_text".localized)
+        buttonContainerView.layer.cornerRadius = buttonContainerViewHeightConstraint.constant/2
+        buttonContainerView.backgroundColor = UIColor.secondary
         backButton.setTitle("", for: .normal)
         backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        backButton.tintColor = UIColor.primary
         categoryImageBanner.image = UIImage(named: "category-placeholder")
         groceryListTableView.delegate = self
         groceryListTableView.dataSource = self

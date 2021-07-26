@@ -26,30 +26,44 @@
                                 <rect key="frame" x="0.0" y="172" width="414" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvV-Oh-gxM">
-                                <rect key="frame" x="12" y="56" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onBackButtonTap:" destination="koI-wK-KBq" eventType="touchUpInside" id="NzY-1G-9jX"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckh-6A-pRf">
+                                <rect key="frame" x="12" y="56" width="46" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvV-Oh-gxM">
+                                        <rect key="frame" x="0.0" y="8" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onBackButtonTap:" destination="koI-wK-KBq" eventType="touchUpInside" id="NzY-1G-9jX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="0wW-UI-S9Q"/>
+                                    <constraint firstItem="dvV-Oh-gxM" firstAttribute="centerY" secondItem="Ckh-6A-pRf" secondAttribute="centerY" id="GPB-hW-Rvc"/>
+                                    <constraint firstItem="dvV-Oh-gxM" firstAttribute="centerX" secondItem="Ckh-6A-pRf" secondAttribute="centerX" id="Qqb-3C-Cos"/>
+                                    <constraint firstAttribute="height" constant="46" id="tE3-bP-ugl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8qQ-w3-vaf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ckh-6A-pRf" firstAttribute="leading" secondItem="AB8-w5-9hi" secondAttribute="leading" constant="12" id="15B-73-Ezf"/>
                             <constraint firstItem="Qh3-zS-SsJ" firstAttribute="trailing" secondItem="8qQ-w3-vaf" secondAttribute="trailing" id="GT2-DI-y7U"/>
-                            <constraint firstItem="dvV-Oh-gxM" firstAttribute="leading" secondItem="AB8-w5-9hi" secondAttribute="leading" constant="12" id="Lak-T7-6eR"/>
                             <constraint firstItem="Qh3-zS-SsJ" firstAttribute="top" secondItem="AB8-w5-9hi" secondAttribute="bottom" id="MHS-tb-NmO"/>
                             <constraint firstItem="8qQ-w3-vaf" firstAttribute="trailing" secondItem="AB8-w5-9hi" secondAttribute="trailing" id="QXf-69-W5y"/>
                             <constraint firstItem="Qh3-zS-SsJ" firstAttribute="leading" secondItem="8qQ-w3-vaf" secondAttribute="leading" id="TDI-En-q83"/>
                             <constraint firstItem="AB8-w5-9hi" firstAttribute="top" secondItem="8qQ-w3-vaf" secondAttribute="top" id="VCy-1G-GL5"/>
-                            <constraint firstItem="dvV-Oh-gxM" firstAttribute="top" secondItem="AB8-w5-9hi" secondAttribute="top" constant="12" id="VhB-K5-bz5"/>
                             <constraint firstItem="AB8-w5-9hi" firstAttribute="leading" secondItem="8qQ-w3-vaf" secondAttribute="leading" id="j8b-bD-dC9"/>
                             <constraint firstItem="8qQ-w3-vaf" firstAttribute="bottom" secondItem="Qh3-zS-SsJ" secondAttribute="bottom" id="kLg-Iz-Lgo"/>
+                            <constraint firstItem="Ckh-6A-pRf" firstAttribute="top" secondItem="AB8-w5-9hi" secondAttribute="top" constant="12" id="wOJ-XF-qnk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="dvV-Oh-gxM" id="XMw-j9-puD"/>
+                        <outlet property="buttonContainerView" destination="Ckh-6A-pRf" id="Vgp-am-0LW"/>
+                        <outlet property="buttonContainerViewHeightConstraint" destination="tE3-bP-ugl" id="2bC-xz-cSa"/>
                         <outlet property="categoryImageBanner" destination="AB8-w5-9hi" id="TDl-ba-aTA"/>
                         <outlet property="groceryListTableView" destination="Qh3-zS-SsJ" id="2DY-Ps-JTL"/>
                         <outlet property="imageBannerHeightConstraint" destination="GV1-Zf-f0X" id="E3h-8P-xta"/>
