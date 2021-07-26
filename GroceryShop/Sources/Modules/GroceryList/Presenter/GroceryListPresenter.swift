@@ -30,7 +30,9 @@ class GroceryListPresenter: GroceryListPresenterProtocol {
     func viewDidLoad() {
         view?.showLoading()
         interactor?.retrieveGroceries(using: category) { [weak self] groceries in
-            return groceries.map { grocery -> GroceryItemViewModel in
+            let safeCategoryId = "\(self?.category.id ?? 0)"
+            let categoryGroceryList = groceries.filter { $0.categoryId == safeCategoryId }
+            return categoryGroceryList.map { grocery -> GroceryItemViewModel in
                 let cartItem = self?.cartInteractor?.getCartItem(id: grocery.id)
                 guard let safeCartItem = cartItem else { return grocery }
                 let itemCounterViewModel = ItemCounterViewModel(id: safeCartItem.id, counterValue: safeCartItem.value)
