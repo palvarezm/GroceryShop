@@ -39,6 +39,12 @@ extension GroceryListViewController: GroceryListViewProtocol {
     func showGroceryList(groceryList: [GroceryItemViewModel]) {
         self.groceryList = groceryList
         self.groceryListTableView.reloadData()
+        if groceryList.isEmpty {
+            groceryListTableView.setEmptyTableView(title: "empty_grocery_list_title".localized, subtitle: "empty_grocery_list_subtitle".localized)
+        }
+        else {
+            groceryListTableView.resetFromEmptyTableView()
+        }
     }
     
     func updateImageBanner(image: UIImage) {

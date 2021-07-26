@@ -13,3 +13,5 @@
 "loading_view_text" = "Loading";
 "ok_alert" = "Ok";
 "generic_error" = "An error has ocurred";
+"empty_grocery_list_title" = "This category has no groceries";
+"empty_grocery_list_subtitle" = "Groceries will be here";

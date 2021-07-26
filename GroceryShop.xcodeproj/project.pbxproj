@@ -70,6 +70,7 @@
 		83A77E08269D2A4E00F36CF3 /* CategoryListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77E07269D2A4E00F36CF3 /* CategoryListLocalDataManager.swift */; };
 		83A77E16269D311400F36CF3 /* LocalCategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77E15269D311400F36CF3 /* LocalCategoryItem.swift */; };
 		83A85AA326ADEB9500192A4F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AA226ADEB9500192A4F /* UIViewController+Extension.swift */; };
+		83A85AA826AE2B8100192A4F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AA726AE2B8100192A4F /* UITableView+Extension.swift */; };
 		83AC7D7226A65A6A00EC2237 /* ItemCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC7D7126A65A6A00EC2237 /* ItemCounter.xib */; };
 		83AC7D7726A65A9E00EC2237 /* ItemCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC7D7626A65A9E00EC2237 /* ItemCounter.swift */; };
 		83AC7D7F26A65C3E00EC2237 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC7D7E26A65C3E00EC2237 /* CartItem.swift */; };
@@ -172,6 +173,7 @@
 		83A77E07269D2A4E00F36CF3 /* CategoryListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListLocalDataManager.swift; sourceTree = "<group>"; };
 		83A77E15269D311400F36CF3 /* LocalCategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCategoryItem.swift; sourceTree = "<group>"; };
 		83A85AA226ADEB9500192A4F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		83A85AA726AE2B8100192A4F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		83AC7D7126A65A6A00EC2237 /* ItemCounter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCounter.xib; sourceTree = "<group>"; };
 		83AC7D7626A65A9E00EC2237 /* ItemCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCounter.swift; sourceTree = "<group>"; };
 		83AC7D7E26A65C3E00EC2237 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 				8397197B269A7BF80084E33C /* UIColor+Extension.swift */,
 				83971980269A7CDA0084E33C /* Double+Extension.swift */,
 				83A85AA226ADEB9500192A4F /* UIViewController+Extension.swift */,
+				83A85AA726AE2B8100192A4F /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -967,6 +970,7 @@
 			files = (
 				8394BF16269BDA4200EA2ADA /* CategoryListResponse.swift in Sources */,
 				83AC9FAE26AA61060091DD53 /* CartLocalDataManagerProtocol.swift in Sources */,
+				83A85AA826AE2B8100192A4F /* UITableView+Extension.swift in Sources */,
 				8398004D26A28FAA002411B6 /* ImageHttpService.swift in Sources */,
 				83971901269A51DE0084E33C /* AppDelegate.swift in Sources */,
 				8398005226A29591002411B6 /* ImageHttpRouter.swift in Sources */,
