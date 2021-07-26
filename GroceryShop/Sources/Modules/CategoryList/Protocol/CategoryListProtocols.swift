@@ -18,8 +18,7 @@ protocol CategoryListViewControllerProtocol: class {
 
 protocol CategoryListPresenterProtocol: class {
     var view: CategoryListViewControllerProtocol? { get set }
-    var interactor: CategoryListInteractorInputProtocol? { get set }
-    var imageInteractor: ImageInteractorProtocol? { get set }
+    var categoryListUseCases: CategoryListUseCases? { get set }
     var router: CategoryListRouterProtocol { get set }
     
     func viewDidLoad() -> Void
