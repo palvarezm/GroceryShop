@@ -19,8 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let submodules = (
             home: CategoryListModuleBuilder.build(usingNavigationFactory: NavigationBuilder.build),
-            cart: UIViewController(),
-            profile: UIViewController())
+            cart: CartModuleBuilder.build(usingNavigationFactory: NavigationBuilder.build),
+            profile: ProfileModuleBuilder.build(usingNavigationFactory: NavigationBuilder.build)
+        )
         let tabBarViewController = TabBarModuleBuilder.build(usingSubmodules: submodules)
         
         let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)

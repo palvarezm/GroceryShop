@@ -71,6 +71,12 @@
 		83A77E16269D311400F36CF3 /* LocalCategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A77E15269D311400F36CF3 /* LocalCategoryItem.swift */; };
 		83A85AA326ADEB9500192A4F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AA226ADEB9500192A4F /* UIViewController+Extension.swift */; };
 		83A85AA826AE2B8100192A4F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AA726AE2B8100192A4F /* UITableView+Extension.swift */; };
+		83A85ACA26AE3E1800192A4F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A85AC926AE3E1800192A4F /* Profile.storyboard */; };
+		83A85AD226AE3E1F00192A4F /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A85AD126AE3E1F00192A4F /* Cart.storyboard */; };
+		83A85AD726AE3E3300192A4F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AD626AE3E3300192A4F /* CartViewController.swift */; };
+		83A85ADC26AE3E4700192A4F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85ADB26AE3E4700192A4F /* ProfileViewController.swift */; };
+		83A85AE126AE3E5400192A4F /* CartModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AE026AE3E5400192A4F /* CartModuleBuilder.swift */; };
+		83A85AE626AE3E6000192A4F /* ProfileModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A85AE526AE3E6000192A4F /* ProfileModuleBuilder.swift */; };
 		83AC7D7226A65A6A00EC2237 /* ItemCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC7D7126A65A6A00EC2237 /* ItemCounter.xib */; };
 		83AC7D7726A65A9E00EC2237 /* ItemCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC7D7626A65A9E00EC2237 /* ItemCounter.swift */; };
 		83AC7D7F26A65C3E00EC2237 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC7D7E26A65C3E00EC2237 /* CartItem.swift */; };
@@ -174,6 +180,12 @@
 		83A77E15269D311400F36CF3 /* LocalCategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCategoryItem.swift; sourceTree = "<group>"; };
 		83A85AA226ADEB9500192A4F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		83A85AA726AE2B8100192A4F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		83A85AC926AE3E1800192A4F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		83A85AD126AE3E1F00192A4F /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		83A85AD626AE3E3300192A4F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		83A85ADB26AE3E4700192A4F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		83A85AE026AE3E5400192A4F /* CartModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModuleBuilder.swift; sourceTree = "<group>"; };
+		83A85AE526AE3E6000192A4F /* ProfileModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleBuilder.swift; sourceTree = "<group>"; };
 		83AC7D7126A65A6A00EC2237 /* ItemCounter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCounter.xib; sourceTree = "<group>"; };
 		83AC7D7626A65A9E00EC2237 /* ItemCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCounter.swift; sourceTree = "<group>"; };
 		83AC7D7E26A65C3E00EC2237 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
@@ -489,6 +501,8 @@
 				8394BEBF269BB5B200EA2ADA /* TabBar */,
 				8394BEDD269BCAC700EA2ADA /* CategoryList */,
 				83A2003326A4E2C2007D7E32 /* GroceryList */,
+				83A85AC826AE3E0800192A4F /* Cart */,
+				83A85AC726AE3E0100192A4F /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -688,6 +702,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		83A85AC726AE3E0100192A4F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				83A85AC926AE3E1800192A4F /* Profile.storyboard */,
+				83A85ADB26AE3E4700192A4F /* ProfileViewController.swift */,
+				83A85AE526AE3E6000192A4F /* ProfileModuleBuilder.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		83A85AC826AE3E0800192A4F /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				83A85AD126AE3E1F00192A4F /* Cart.storyboard */,
+				83A85AD626AE3E3300192A4F /* CartViewController.swift */,
+				83A85AE026AE3E5400192A4F /* CartModuleBuilder.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		83AC7D7026A65A5500EC2237 /* ItemCounter */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,10 +866,12 @@
 			files = (
 				83AC7D7226A65A6A00EC2237 /* ItemCounter.xib in Resources */,
 				83971991269A8BBC0084E33C /* categories-response.json in Resources */,
+				83A85AD226AE3E1F00192A4F /* Cart.storyboard in Resources */,
 				838E453D269E8F3E00B7DB82 /* CategoryCard.xib in Resources */,
 				838E4537269E8E9E00B7DB82 /* CategoryTableViewCell.xib in Resources */,
 				8397190D269A51DF0084E33C /* LaunchScreen.storyboard in Resources */,
 				8394BEE7269BCAE500EA2ADA /* CategoryList.storyboard in Resources */,
+				83A85ACA26AE3E1800192A4F /* Profile.storyboard in Resources */,
 				8397196C269A7A7F0084E33C /* Localizable.strings in Resources */,
 				83A2006426A51C06007D7E32 /* GroceryList.storyboard in Resources */,
 				8397198C269A8BA30084E33C /* products-response.json in Resources */,
@@ -981,6 +1017,7 @@
 				838E454A269E8FC000B7DB82 /* CategoryCard.swift in Sources */,
 				83AC7D7F26A65C3E00EC2237 /* CartItem.swift in Sources */,
 				83A2005F26A51BFD007D7E32 /* GroceryListViewController.swift in Sources */,
+				83A85ADC26AE3E4700192A4F /* ProfileViewController.swift in Sources */,
 				8394BEDF269BCADB00EA2ADA /* CategoryListViewController.swift in Sources */,
 				83AC9FB326AA61210091DD53 /* CartLocalDataManager.swift in Sources */,
 				83A2005A26A502E1007D7E32 /* GroceryListRemoteDataManager.swift in Sources */,
@@ -988,6 +1025,7 @@
 				83971981269A7CDA0084E33C /* Double+Extension.swift in Sources */,
 				83A2004D26A4EBF1007D7E32 /* GroceryListResponse.swift in Sources */,
 				83971987269A7D380084E33C /* LoadingIndicatorView.swift in Sources */,
+				83A85AE126AE3E5400192A4F /* CartModuleBuilder.swift in Sources */,
 				83AC7D8426A65D2B00EC2237 /* LocalCartItem.swift in Sources */,
 				83971972269A7AF60084E33C /* UIVIew+Extension.swift in Sources */,
 				8394BEF2269BCCEB00EA2ADA /* CategoryListRouter.swift in Sources */,
@@ -995,6 +1033,7 @@
 				8394BF28269BDF3A00EA2ADA /* CategoryListProtocols.swift in Sources */,
 				83A2008C26A546A1007D7E32 /* GroceryTableViewCell.swift in Sources */,
 				83A2005526A4FEC1007D7E32 /* GroceryListInteractor.swift in Sources */,
+				83A85AE626AE3E6000192A4F /* ProfileModuleBuilder.swift in Sources */,
 				8398004726A2780F002411B6 /* ImageRemoteDataManagerProtocol.swift in Sources */,
 				83AC7D8926A65FD600EC2237 /* ItemCounterViewModel.swift in Sources */,
 				83A2008326A5433C007D7E32 /* GroceryListViewController+TableView.swift in Sources */,
@@ -1022,6 +1061,7 @@
 				83971999269A8DCE0084E33C /* HttpRouter.swift in Sources */,
 				83A2006926A51CD8007D7E32 /* GroceryListModuleBuilder.swift in Sources */,
 				8397199E269A8E400084E33C /* HttpService.swift in Sources */,
+				83A85AD726AE3E3300192A4F /* CartViewController.swift in Sources */,
 				83A77E08269D2A4E00F36CF3 /* CategoryListLocalDataManager.swift in Sources */,
 				83A77DF0269CE79700F36CF3 /* GroceryHttpRouter.swift in Sources */,
 				839719A8269A93C80084E33C /* StubService.swift in Sources */,
