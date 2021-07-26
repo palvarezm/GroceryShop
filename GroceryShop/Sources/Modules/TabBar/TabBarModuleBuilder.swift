@@ -16,7 +16,9 @@ typealias GroceryTabs = (
 class TabBarModuleBuilder {
     static func build(usingSubmodules submodules: TabBarRouter.Submodules) -> UITabBarController {
         let tabs = TabBarRouter.tabs(usingSubmodules: submodules)
-        let presenter = TabBarPresenter()
+        let cartLocalDataManager: CartLocalDataManagerProtocol = CartLocalDataManager()
+        let cartInteractor = CartInteractor(localDataManager: cartLocalDataManager)
+        let presenter = TabBarPresenter(cartInteractor: cartInteractor)
         let tabBarController = TabBarController(tabs: tabs, presenter: presenter)
         presenter.view = tabBarController
         

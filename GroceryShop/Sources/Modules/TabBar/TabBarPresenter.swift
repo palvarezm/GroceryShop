@@ -11,12 +11,17 @@ protocol TabBarPresenterProtocol {
 
 class TabBarPresenter {
     weak var view: TabBarControllerProtocol?
+    var cartInteractor: CartInteractorProtocol?
     
-    init() { }
+    init(cartInteractor: CartInteractorProtocol) {
+        self.cartInteractor = cartInteractor
+    }
 }
 
 extension TabBarPresenter: TabBarPresenterProtocol {
     func viewDidLoad() {
-        
+        self.cartInteractor?.getCartCount { count in
+            self.view?.updateCartCount(count: count)
+        }
     }
 }

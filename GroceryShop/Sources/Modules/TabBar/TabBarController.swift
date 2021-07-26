@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TabBarControllerProtocol: class {
-    
+    func updateCartCount(count: Int) -> Void
 }
 
 class TabBarController: UITabBarController {
@@ -33,5 +33,7 @@ class TabBarController: UITabBarController {
 }
 
 extension TabBarController: TabBarControllerProtocol {
-    
+    func updateCartCount(count: Int) {
+        cartTab.tabBarItem.badgeValue = (count == 0) ? nil : "\(count)"
+    }
 }
