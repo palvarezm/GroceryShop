@@ -19,9 +19,7 @@ protocol GroceryListViewProtocol: class {
 
 protocol GroceryListPresenterProtocol: class {
     var view: GroceryListViewProtocol? { get set }
-    var interactor: GroceryListInteractorInputProtocol? { get set }
-    var imageInteractor: ImageInteractorProtocol? { get set }
-    var cartInteractor: CartInteractorProtocol? { get set }
+    var groceryListsUseCases: GroceryListUseCases? { get set }
     var router: GroceryListRouterProtocol? { get set }
     
     func viewDidLoad()
