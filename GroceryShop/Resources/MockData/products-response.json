@@ -1,0 +1,522 @@
+{
+    "data": {
+        "id": 1,
+        "category": "fruits",
+        "details": "Best of the fresh fruits right from the farm",
+        "image": {
+            "id": 1,
+            "name": "fruits_category.jpeg"
+        },
+        "groceries": {
+            "data": [
+                {
+                    "id": 1,
+                    "title": "red apple",
+                    "details": "Awesome kashmiri red apples right at your doorstep",
+                    "categoryId": 1,
+                    "image_id": 5,
+                    "image": {
+                        "id": 5,
+                        "name": "red_apple.jpg",
+                        "created_at": "2019-06-07 15:49:44",
+                        "updated_at": "2019-06-07 15:49:44"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 1,
+                                "grocery_id": 1,
+                                "quantity": 15,
+                                "weight": 0.9899999999999999911182158029987476766109466552734375,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            },
+                            {
+                                "skuId": 2,
+                                "grocery_id": 1,
+                                "quantity": 10,
+                                "weight": 1.9899999999999999911182158029987476766109466552734375,
+                                "price": 4.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 2,
+                    "title": "green apple",
+                    "details": "Fresh green apples right at your doorstep",
+                    "categoryId": 1,
+                    "image_id": 6,
+                    "image": {
+                        "id": 6,
+                        "name": "green_apple.jpg",
+                        "created_at": "2019-06-07 15:51:05",
+                        "updated_at": "2019-06-07 15:51:05"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 3,
+                                "grocery_id": 2,
+                                "quantity": 8,
+                                "weight": 0.5,
+                                "price": 2
+                            },
+                            {
+                                "skuId": 4,
+                                "grocery_id": 2,
+                                "quantity": 8,
+                                "weight": 1,
+                                "price": 4
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 3,
+                    "title": "custard apple",
+                    "details": "Best custard apples from the farms",
+                    "categoryId": 1,
+                    "image_id": 7,
+                    "image": {
+                        "id": 7,
+                        "name": "custard_apple.jpeg",
+                        "created_at": "2019-06-07 17:23:51",
+                        "updated_at": "2019-06-07 17:23:51"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 5,
+                                "grocery_id": 3,
+                                "quantity": 15,
+                                "weight": 0.9899999999999999911182158029987476766109466552734375,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 4,
+                    "title": "Kiwi",
+                    "details": "Green healthy kiwi to help you with all the vitamins",
+                    "categoryId": 1,
+                    "image_id": 8,
+                    "image": {
+                        "id": 8,
+                        "name": "kiwi.jpeg",
+                        "created_at": "2019-06-07 17:25:38",
+                        "updated_at": "2019-06-07 17:25:38"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 6,
+                                "grocery_id": 4,
+                                "quantity": 10,
+                                "weight": 0.5,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 5,
+                    "title": "Litchi",
+                    "details": "Sweet and tasty litchis which will be perfect with you r vanila icecream",
+                    "categoryId": 1,
+                    "image_id": 9,
+                    "image": {
+                        "id": 9,
+                        "name": "litchi.jpeg",
+                        "created_at": "2019-06-07 17:26:42",
+                        "updated_at": "2019-06-07 17:26:42"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 7,
+                                "grocery_id": 5,
+                                "quantity": 8,
+                                "weight": 0.5,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 6,
+                    "title": "mango",
+                    "details": "Ripe mango from the farms",
+                    "categoryId": 1,
+                    "image_id": 10,
+                    "image": {
+                        "id": 10,
+                        "name": "mango.jpeg",
+                        "created_at": "2019-06-07 17:27:08",
+                        "updated_at": "2019-06-07 17:27:08"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 8,
+                                "grocery_id": 6,
+                                "quantity": 10,
+                                "weight": 1,
+                                "price": 3.9900000000000002131628207280300557613372802734375
+                            },
+                            {
+                                "skuId": 9,
+                                "grocery_id": 6,
+                                "quantity": 10,
+                                "weight": 2,
+                                "price": 6.9900000000000002131628207280300557613372802734375
+                            },
+                            {
+                                "skuId": 10,
+                                "grocery_id": 6,
+                                "quantity": 5,
+                                "weight": 3,
+                                "price": 9.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 7,
+                    "title": "orange",
+                    "details": "Tangy orange fresh fresh fresh",
+                    "categoryId": 1,
+                    "image_id": 11,
+                    "image": {
+                        "id": 11,
+                        "name": "orange.jpeg",
+                        "created_at": "2019-06-07 17:28:03",
+                        "updated_at": "2019-06-07 17:28:03"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 11,
+                                "grocery_id": 7,
+                                "quantity": 10,
+                                "weight": 1,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            },
+                            {
+                                "skuId": 12,
+                                "grocery_id": 7,
+                                "quantity": 5,
+                                "weight": 2,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 8,
+                    "title": "pineapple",
+                    "details": "Sweetest pineapple which goes as a great delicacy",
+                    "categoryId": 1,
+                    "image_id": 12,
+                    "image": {
+                        "id": 12,
+                        "name": "pineapple.jpeg",
+                        "created_at": "2019-06-07 17:28:58",
+                        "updated_at": "2019-06-07 17:28:58"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 13,
+                                "grocery_id": 8,
+                                "quantity": 10,
+                                "weight": 0.5,
+                                "price": 1
+                            },
+                            {
+                                "skuId": 14,
+                                "grocery_id": 8,
+                                "quantity": 15,
+                                "weight": 1,
+                                "price": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 9,
+                    "title": "plum",
+                    "details": "Plumpy plums sweet and yummy",
+                    "categoryId": 1,
+                    "image_id": 13,
+                    "image": {
+                        "id": 13,
+                        "name": "plum.jpeg",
+                        "created_at": "2019-06-07 17:29:47",
+                        "updated_at": "2019-06-07 17:29:47"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 15,
+                                "grocery_id": 9,
+                                "quantity": 10,
+                                "weight": 1.9899999999999999911182158029987476766109466552734375,
+                                "price": 4
+                            },
+                            {
+                                "skuId": 16,
+                                "grocery_id": 9,
+                                "quantity": 10,
+                                "weight": 2.9900000000000002131628207280300557613372802734375,
+                                "price": 6
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 10,
+                    "title": "pomegranate",
+                    "details": "Best anti-oxidants are there in pomegranate",
+                    "categoryId": 1,
+                    "image_id": 14,
+                    "image": {
+                        "id": 14,
+                        "name": "pomegranate.jpeg",
+                        "created_at": "2019-06-07 17:30:41",
+                        "updated_at": "2019-06-07 17:30:41"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 17,
+                                "grocery_id": 10,
+                                "quantity": 5,
+                                "weight": 0.5,
+                                "price": 2
+                            },
+                            {
+                                "skuId": 18,
+                                "grocery_id": 10,
+                                "quantity": 8,
+                                "weight": 1,
+                                "price": 4
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 11,
+                    "title": "Raspberry",
+                    "details": "Another great anti-oxidant and fiber rich fruit",
+                    "categoryId": 1,
+                    "image_id": 15,
+                    "image": {
+                        "id": 15,
+                        "name": "raspberry.jpeg",
+                        "created_at": "2019-06-07 17:31:21",
+                        "updated_at": "2019-06-07 17:31:21"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 19,
+                                "grocery_id": 11,
+                                "quantity": 10,
+                                "weight": 0.9899999999999999911182158029987476766109466552734375,
+                                "price": 1
+                            },
+                            {
+                                "skuId": 20,
+                                "grocery_id": 11,
+                                "quantity": 5,
+                                "weight": 1.9899999999999999911182158029987476766109466552734375,
+                                "price": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 12,
+                    "title": "Red Grapes",
+                    "details": "Farm fresh red grapes from the wineyard",
+                    "categoryId": 1,
+                    "image_id": 16,
+                    "image": {
+                        "id": 16,
+                        "name": "red_grapes.jpeg",
+                        "created_at": "2019-06-07 17:32:12",
+                        "updated_at": "2019-06-07 17:32:12"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 21,
+                                "grocery_id": 12,
+                                "quantity": 8,
+                                "weight": 1,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            },
+                            {
+                                "skuId": 22,
+                                "grocery_id": 12,
+                                "quantity": 10,
+                                "weight": 2,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 13,
+                    "title": "Red Mango",
+                    "details": "Even seen a red mango? This ones are yummy",
+                    "categoryId": 1,
+                    "image_id": 17,
+                    "image": {
+                        "id": 17,
+                        "name": "red_mango.jpeg",
+                        "created_at": "2019-06-07 17:33:02",
+                        "updated_at": "2019-06-07 17:33:02"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 23,
+                                "grocery_id": 13,
+                                "quantity": 8,
+                                "weight": 1,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            },
+                            {
+                                "skuId": 24,
+                                "grocery_id": 13,
+                                "quantity": 8,
+                                "weight": 2,
+                                "price": 3.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 14,
+                    "title": "Robusta Banana",
+                    "details": "Fiber rich robusta banana",
+                    "categoryId": 1,
+                    "image_id": 18,
+                    "image": {
+                        "id": 18,
+                        "name": "robusta_banana.jpeg",
+                        "created_at": "2019-06-07 17:33:43",
+                        "updated_at": "2019-06-07 17:33:43"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 25,
+                                "grocery_id": 14,
+                                "quantity": 10,
+                                "weight": 1,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            },
+                            {
+                                "skuId": 26,
+                                "grocery_id": 14,
+                                "quantity": 10,
+                                "weight": 2,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 15,
+                    "title": "Strawberry",
+                    "details": "Super fiber rich and sweet and sour red berries",
+                    "categoryId": 1,
+                    "image_id": 19,
+                    "image": {
+                        "id": 19,
+                        "name": "strawberry.jpg",
+                        "created_at": "2019-06-07 17:34:22",
+                        "updated_at": "2019-06-07 17:34:22"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 27,
+                                "grocery_id": 15,
+                                "quantity": 10,
+                                "weight": 0.9899999999999999911182158029987476766109466552734375,
+                                "price": 0.9899999999999999911182158029987476766109466552734375
+                            },
+                            {
+                                "skuId": 28,
+                                "grocery_id": 15,
+                                "quantity": 10,
+                                "weight": 1.9899999999999999911182158029987476766109466552734375,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 16,
+                    "title": "Watermelon",
+                    "details": "Thirst buster for summer and all seasons",
+                    "categoryId": 1,
+                    "image_id": 20,
+                    "image": {
+                        "id": 20,
+                        "name": "watermelon.jpeg",
+                        "created_at": "2019-06-07 17:34:58",
+                        "updated_at": "2019-06-07 17:34:58"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 29,
+                                "grocery_id": 16,
+                                "quantity": 5,
+                                "weight": 1,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            },
+                            {
+                                "skuId": 30,
+                                "grocery_id": 16,
+                                "quantity": 5,
+                                "weight": 2,
+                                "price": 2.9900000000000002131628207280300557613372802734375
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 17,
+                    "title": "Avocado",
+                    "details": "This single seeded berry goes along so well with eggs or even otherwise!",
+                    "categoryId": 1,
+                    "image_id": 21,
+                    "image": {
+                        "id": 21,
+                        "name": "avocado.jpeg",
+                        "created_at": "2019-06-07 18:33:41",
+                        "updated_at": "2019-06-07 18:33:41"
+                    },
+                    "skus": {
+                        "data": [
+                            {
+                                "skuId": 31,
+                                "grocery_id": 17,
+                                "quantity": 10,
+                                "weight": 0.9899999999999999911182158029987476766109466552734375,
+                                "price": 1.9899999999999999911182158029987476766109466552734375
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
